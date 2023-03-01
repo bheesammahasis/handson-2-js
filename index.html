@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>DECISION MAKING</h1>
+<div class="d1"></div>
+<pre class="ques">
+QUESTION NO1:-Calculator
+ Write a program to make a simple calculator using switch statement that takes operator and 
+ two numbers from user and print the result after operation.
+ Note: You have to complete Calculator. No need to take any input
+ Input Format
+ The input contains a operator symbol 
+ (+,−,∗,/)along with two natural numbers B and C.
+ Output Format
+ Return the required result.
+ Constraints
+ 1≤B,C≤1000
+ Example
+ Sample Input
+ + 1 2
+ Sample Output
+ 3
+ </pre>
+<pre class="ans">
+ANSWER NO1:-   
+ const Calculator = (A, B, C) => 
+ {
+ switch(A){
+  case "+" : return B+C;
+  case "-" : return B-C;
+  case "*" : return B*C;
+  case "/" : return B/C;
+ }
+ };
+ </pre>
+ <hr>
+ <div class="d1"></div>
+ <pre class="ques">
+ QUESTION NO2:-Check whether the condition is fulfilled or not?
+ Write a program that takes a number and prints whether the number is divisible by 
+ 6 and 9 or not.
+ Note: You have to complete Check_divisibility. No need to take any input
+ Input Format 
+ The input contains a single number N.
+ Output Format
+ If the condition is satisfied return "Divisible by both" (without quotes) else return "Not 
+  Divisible by both" (without quotes). 
+ Constraints
+ 1≤N≤10000
+ Example
+ Sample Input 1
+ 36
+ Sample Output 1
+ Divisible by both
+ Sample Input 2
+ 27
+ Sample Output 2
+  Not Divisible by both
+</pre>
+<pre class="ans">
+ ANSWER NO2:-   
+ const Check_divisibility = (N) => {
+    if(N%6===0 && N%9===0){
+      return "Divisible by both";
+    }
+    else{
+      return "Not Divisible by both";
+    }
+};
+</pre>
+<hr>
+<div class="d1"></div>
+<pre class="ques">
+QUESTION NO3:-Eligible Voter
+ You are given an integer A, denoting the age of a person, and your task is to determine 
+  whether he/she is eligible to vote or not.
+ Note: You have to complete isEligible function. No need to take any input
+ Input Format
+ The first and the only line of the input contains an integer A, representing the age of a 
+  person.
+ Output Format
+ If the person is eligible to vote, return "Eligible for Voting" otherwise, return "Not 
+  Eligible for Voting"
+ Constraints
+ 0≤A≤120
+ Example
+ Sample Input
+ 13
+ Sample Output
+ Not Eligible for Voting
+ </pre>
+ <pre class="ans">
+ ANSWER NO3:- 
+ const isEligible = (a) => {
+    if(a>17){
+        return "Eligible for Voting";
+      }
+   else{
+    return "Not Eligible for Voting";
+     }
+   };
+    
+ </pre>
+ <hr>
+ <div class="d1"></div>
+ <pre class="ques">
+ QUESTION NO4:- Find Relation
+ PrepBuddy wants you to get familiar with various Relational operators. He provides you 
+  with  two integer values X and Y and asks you to find the relation between them.
+ The relationships between integers X and Y are as follows:If X<Y, it means that X is 
+  smaller than Y.If X>Y, it means that X is greater than Y.If X=Y, it means that X is equal 
+   to Y. 
+ Note: You have to complete findRelationship function. No neeed to take any input. 
+ Input Format
+ The first and the only line of the input contains two space-separated integers 
+ X and Y, denoting the integers which PrepBuddy gives you.
+ Output Format
+ Return the relationship between the integers that PrepBuddy gave you.
+ Constraints
+ 1≤X,Y≤500
+ Example
+ Sample Input
+ 3 11
+ Sample Output
+ 3 is smaller than 11
+ </pre>
+ <pre class="ans">
+  ANSWER NO4:-
+   const findRelation = (x,y) => {
+     	if(x<y){
+	  return x+" is smaller than "+y;
+	}
+	else if(x>y){
+	  return x+" is greater than "+y;
+	}
+  else{
+    return x+" is equal to "+y;
+  } 
+ };
+ </pre>
+ <hr>
+ <div class="d1"></div>
+ <pre class="ques">
+ QUESTION NO5:- Find Grades
+ Your school has the following grading system based upon the marks(M) obtained by a student:
+ If M≤10, the grade will be E.If 11≥M≤20, the grade will be D.If 21≥M≤30, the grade will be 
+  C.If 31≥M≤40, the grade will be B.If 41≥M≤50, the grade will be A.Your friend will enter 
+   his marks out of 50, and your task is to print his grades using a switch statement.
+ Note: You have to complete findGrades function. No need to take any input.
+ Input Format
+ The first and the only line of the input contains an integer M, representing the marks 
+  that  your friend will enter in the grading system.
+ Output Format
+ Return the grade obtained by your friend.
+ Constraints
+ 0≤M≤50
+ Example
+ Sample Input
+ 1
+ Sample Output
+ E
+ </pre>
+ <pre class="ans">
+ ANSWER NO5:-
+ const findGrades = (a) => {
+      switch(true){
+        case a<=10:
+           return "E";
+        case a>=11 && a<=20:
+           return "D";
+        case a>=21 && a<=30:
+           return "C";
+        case a>=31 && a<=40:
+           return "B";
+        case a>=41 && a<=50:
+           return "A";
+        default:
+        return "invalid marks";
+        }
+    };
+ </pre>
+ <hr>
+ <div class="d1"></div>
+ <pre class="ques">
+ QUESTION NO6:- Get Value
+ You are provided with a table containing some characters and their corresponding values. 
+  Your task will be to find the value from the table corresponding to an input character 
+   and return it.
+
+ |  P or p 	- PrepBytes      	|
+ |  Z or z 	- Zenith         	|
+ |  E or e 	- Expert Coder   	|
+ |  D or d 	- Data Structure 	|
+
+ Note: You have to complete getValue function. No need to take any input.
+ Input Format
+ The first and the only line of the input contains a character C, representing the 
+  character  that you will get in input.
+ Output Format
+ Return the value corresponding to the input character.
+ Constraints
+ C will be one of the following characters: [P,p,Z,z,E,e,D,d].
+ Example
+ Sample Input
+ E
+ Sample Output
+ Expert Coder
+ </pre>
+ <pre class="ans">
+  ANSWER NO6:-
+    const getValue = (a) => {
+        if(a==='P' || a==='p'){
+          return "PrepBytes";
+        }
+       else if(a==='Z' || a==='z'){
+          return "Zenith";
+        }
+        else if(a==='E' || a==='e'){
+          return "Expert Coder";
+        }
+        if(a==='D' || a==='d'){
+          return "Data Structure";
+        }
+    };
+    
+ </pre>
+ <hr>
+ <div class="d1"></div>
+ <pre class="ques">
+ QUESTION NO7:- Find the maximum out of three numbers.
+  Take three numbers and print the largest number among them if all of three are same  
+   print  −1.
+    Note: You have to complete Max_out_of_three. No need to take any input.
+    Input Format
+    The input contains three numbers A,B and C.
+    Output Format
+    Return the maximum number out of the three numbers as result.
+    Constraints
+    1≤A,B,CC≤10000
+    Example
+    Sample Input
+    2 5 4
+    Sample Output
+    5
+ </pre>
+ <pre class="ans">
+ ANSWER NO7:-
+    const Max_out_of_three = (A,B,C) => {
+        if(A>B && A>C){
+           return A;
+        }
+        else if(B>A && B>C){
+            return B;
+        }
+        else if(C>B && C>A){
+          return C;
+        }
+        return -1;
+        
+    };
+    
+ </pre>
+ <hr>
+ <div class="d1"></div>
+ <pre class="ques">
+ QUESTION NO8:-Second Smallest
+ You are given 3 distinct integers X,Y, and Z,and your task is to find and return the 
+  second  smallest integer among the three provided integers.
+ Note: You have to complete findSndSmallest function. No need to take any input.
+ Input Format
+ The first and the only line of the input contains three space-separated integers 
+ X, Y, and Z, denoting the integers among which you have to find the second smallest 
+  element.
+ Output Format
+ Return the second smallest integer among the three integers given to you.
+ Constraints
+ 1≤X,Y,Z≤500
+ X!=Y, Y!=Z, X!=ZExample
+ Sample Input
+ 2 9 23
+ Sample Output
+ 9 
+ </pre>
+ <pre class="ans">
+ ANSWER NO8:-
+ const findSndSmallest = (x,y,z) => {
+      if(x>y && y>z){
+         return y;
+      }
+      else if(x>z && z>y){
+          return z;
+      }
+      else if(y>z && z>x){
+         return z;
+      }
+      else if(y>x && x>z){
+        return x;
+        }
+      else if(z>x && x>y){
+     return x;
+      }
+    else if(z>y && y>x){
+     return y;
+        }
+    return -1;
+    };
+    //second method
+    //const findSndSmallest = (x,y,z) => {
+    //const sorted = [x, y, z].sort((a, b)=>a - b); 
+    //};
+    
+ </pre>
+ <hr>
+ <div class="d1"></div>
+ <pre class="ques">
+ QUESTION NO9:- Check whether the triangle is Acute or Obtuse
+ Write a program takes takes three angles and checks whether the triangle is acute or 
+  obtuse.
+ Note: You have to complete Triangle_Check. No need to take any input. 
+ input Format
+ The input contains three numbers A, B and C which denotes the angles of a triangle.
+ Output Format
+ Return the required result.
+ Constraints
+ 0≤A,B,C≤180
+ Example
+ Sample Input
+ 60 100 20
+ Sample Output
+ obtuse
+ </pre>
+ <pre class="ans">
+  ANSWER NO9:-
+    const Triangle_Check = (A,B,C) => {
+        if(A>90 || B>90 || C>90){
+           return "obtuse";
+        }
+        else{
+          return "acute"
+        }
+        
+    };
+    
+ </pre>
+
+
+</body>
+</html>
